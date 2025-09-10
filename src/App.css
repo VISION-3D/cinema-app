@@ -1,0 +1,90 @@
+/* Style global */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #141414; /* fond sombre comme Netflix */
+  color: #fff;
+  text-align: center;
+}
+
+/* Titre principal */
+h1 {
+  margin: 20px 0;
+  color: #e50914; /* rouge Netflix */
+}
+
+/* Zone filtres + ajout */
+form,
+input {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+form input {
+  width: 180px;
+}
+
+form button {
+  padding: 10px 15px;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: #f40612;
+}
+
+/* Conteneur de la liste */
+.MovieList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Style d’une carte */
+.MovieCard {
+  background-color: #222;
+  border-radius: 10px;
+  padding: 15px;
+  width: 220px;
+  transition: transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+.MovieCard:hover {
+  transform: scale(1.05);
+}
+
+.MovieCard img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.MovieCard h3 {
+  margin: 10px 0 5px;
+  color: #fff;
+}
+
+.MovieCard p {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.MovieCard p:last-child {
+  color: gold;
+  font-weight: bold;
+}
+.MovieCard img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
