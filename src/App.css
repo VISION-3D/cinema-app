@@ -1,90 +1,96 @@
-/* Style global */
+/* === Styles globaux === */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #141414; /* fond sombre comme Netflix */
-  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #141414;
+  color: white;
+}
+
+/* === Titre principal === */
+h1 {
+  text-align: center;
+  padding: 5px;
+  color: #e50914;
+}
+
+/* === Conteneur des films === */
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 10px;
+  justify-items: center;
+}
+
+/* === Carte film === */
+.movie-card {
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.8);
+}
+
+/* === Image du film === */
+.movie-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* === Contenu texte centré === */
+.movie-card .content {
+  padding: 10px;
   text-align: center;
 }
 
-/* Titre principal */
-h1 {
-  margin: 20px 0;
-  color: #e50914; /* rouge Netflix */
+.movie-card h3 {
+  margin: 5px 0;
+  font-size: 1.1rem;
 }
 
-/* Zone filtres + ajout */
-form,
-input {
-  margin: 5px;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
+.movie-card p {
+  font-size: 0.9rem;
+  color: #b3b3b3;
+  margin: 5px 0;
 }
 
-form input {
-  width: 180px;
-}
-
-form button {
-  padding: 10px 15px;
-  background-color: #e50914;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-form button:hover {
-  background-color: #f40612;
-}
-
-/* Conteneur de la liste */
-.MovieList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-/* Style d’une carte */
-.MovieCard {
-  background-color: #222;
-  border-radius: 10px;
-  padding: 15px;
-  width: 220px;
-  transition: transform 0.2s;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-}
-
-.MovieCard:hover {
-  transform: scale(1.05);
-}
-
-.MovieCard img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.MovieCard h3 {
-  margin: 10px 0 5px;
-  color: #fff;
-}
-
-.MovieCard p {
-  font-size: 14px;
-  color: #bbb;
-}
-
-.MovieCard p:last-child {
-  color: gold;
+.rating {
   font-weight: bold;
+  color: gold;
 }
-.MovieCard img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  display: block;
+
+/* === Formulaires === */
+form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+input {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #e50914;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #b00610;
 }

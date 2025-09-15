@@ -1,24 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 
-function Filter({ setFilterTitle, setFilterRating }) {
-  const [title, setTitle] = useState("");
-  const [rating, setRating] = useState(0);
-
-  const handleTitleChange = (e) => {
-    setTitle(e.target.value);
-    setFilterTitle(e.target.value);
-  };
-
-  const handleRatingChange = (e) => {
-    setRating(e.target.value);
-    setFilterRating(Number(e.target.value));
-  };
-
+// Filtre par titre et note
+function Filter({ setTitleFilter, setRatingFilter }) {
   return (
-    <div style={{ marginBottom: 20 }}>
-      <input type="text" placeholder="Filtrer par titre" value={title} onChange={handleTitleChange} />
-      <input type="number" min="0" max="5" placeholder="Filtrer par note" value={rating} onChange={handleRatingChange} />
-    </div>
+    <form>
+      <input
+        type="text"
+        placeholder="Rechercher par titre..."
+        onChange={(e) => setTitleFilter(e.target.value)}
+      />
+      <input
+        type="number"
+        placeholder="Note minimum"
+        min="0"
+        max="5"
+        onChange={(e) => setRatingFilter(Number(e.target.value))}
+      />
+    </form>
   );
 }
 
